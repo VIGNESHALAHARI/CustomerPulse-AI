@@ -1,0 +1,14 @@
+[
+  {
+    "sentiment_label_id": 1,
+    "label_name": "POSITIVE"
+  },
+  {
+    "sentiment_label_id": 2,
+    "label_name": "NEUTRAL"
+  },
+  {
+    "sentiment_label_id": 3,
+    "label_name": "NEGATIVE"
+  }
+]

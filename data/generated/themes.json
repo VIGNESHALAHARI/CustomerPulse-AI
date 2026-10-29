@@ -1,0 +1,62 @@
+[
+  {
+    "theme_id": 1,
+    "theme_name": "PRODUCT_QUALITY",
+    "description": "Durability and product quality",
+    "is_active": 1
+  },
+  {
+    "theme_id": 2,
+    "theme_name": "DELIVERY",
+    "description": "Delivery speed and reliability",
+    "is_active": 1
+  },
+  {
+    "theme_id": 3,
+    "theme_name": "CUSTOMER_SUPPORT",
+    "description": "Customer service experience",
+    "is_active": 1
+  },
+  {
+    "theme_id": 4,
+    "theme_name": "PRICING",
+    "description": "Price, discounts, and value",
+    "is_active": 1
+  },
+  {
+    "theme_id": 5,
+    "theme_name": "USABILITY",
+    "description": "Ease of use",
+    "is_active": 1
+  },
+  {
+    "theme_id": 6,
+    "theme_name": "PAYMENT",
+    "description": "Payment experience",
+    "is_active": 1
+  },
+  {
+    "theme_id": 7,
+    "theme_name": "RETURNS",
+    "description": "Returns and refunds",
+    "is_active": 1
+  },
+  {
+    "theme_id": 8,
+    "theme_name": "AVAILABILITY",
+    "description": "Product availability",
+    "is_active": 1
+  },
+  {
+    "theme_id": 9,
+    "theme_name": "PACKAGING",
+    "description": "Packaging quality",
+    "is_active": 1
+  },
+  {
+    "theme_id": 10,
+    "theme_name": "FEATURES",
+    "description": "Product features and functionality",
+    "is_active": 1
+  }
+]

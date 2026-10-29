@@ -1,0 +1,4 @@
+sentiment_label_id,label_name
+1,POSITIVE
+2,NEUTRAL
+3,NEGATIVE

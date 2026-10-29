@@ -1,0 +1,288 @@
+{
+  "dataset_rows": 70000,
+  "random_seed": 20261022,
+  "split_method": "GroupShuffleSplit grouped by normalized exact feedback text",
+  "note": "Synthetic-data evaluation. Exact duplicate feedback texts are kept in one split. Results may not represent performance on real customer feedback.",
+  "sentiment": {
+    "model": "sentiment",
+    "training_rows": 56775,
+    "test_rows": 13225,
+    "accuracy": 0.749187145557656,
+    "macro_f1": 0.7193146324971315,
+    "classification_report": {
+      "NEGATIVE": {
+        "precision": 0.6434945984030062,
+        "recall": 0.6839740389415876,
+        "f1-score": 0.6631171345595354,
+        "support": 4006.0
+      },
+      "NEUTRAL": {
+        "precision": 0.5960048919690175,
+        "recall": 0.7614583333333333,
+        "f1-score": 0.6686485250400183,
+        "support": 1920.0
+      },
+      "POSITIVE": {
+        "precision": 0.8759594719066626,
+        "recall": 0.781750924784217,
+        "f1-score": 0.826178237891841,
+        "support": 7299.0
+      },
+      "accuracy": 0.749187145557656,
+      "macro avg": {
+        "precision": 0.7051529874262288,
+        "recall": 0.7423944323530459,
+        "f1-score": 0.7193146324971315,
+        "support": 13225.0
+      },
+      "weighted avg": {
+        "precision": 0.7648995795258743,
+        "recall": 0.749187145557656,
+        "f1-score": 0.7539151128540552,
+        "support": 13225.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "NEGATIVE",
+        "NEUTRAL",
+        "POSITIVE"
+      ],
+      "matrix": [
+        [
+          2740,
+          458,
+          808
+        ],
+        [
+          458,
+          1462,
+          0
+        ],
+        [
+          1060,
+          533,
+          5706
+        ]
+      ]
+    }
+  },
+  "theme": {
+    "model": "theme",
+    "training_rows": 56775,
+    "test_rows": 13225,
+    "accuracy": 0.9236294896030246,
+    "macro_f1": 0.9337356375576931,
+    "classification_report": {
+      "AVAILABILITY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 508.0
+      },
+      "CUSTOMER_SUPPORT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1142.0
+      },
+      "DELIVERY": {
+        "precision": 0.8221574344023324,
+        "recall": 1.0,
+        "f1-score": 0.9024,
+        "support": 2256.0
+      },
+      "FEATURES": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 937.0
+      },
+      "PACKAGING": {
+        "precision": 1.0,
+        "recall": 0.7197013210798392,
+        "f1-score": 0.8370073480293921,
+        "support": 1741.0
+      },
+      "PAYMENT": {
+        "precision": 0.7382146439317954,
+        "recall": 1.0,
+        "f1-score": 0.8493941142527409,
+        "support": 1472.0
+      },
+      "PRICING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1603.0
+      },
+      "PRODUCT_QUALITY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1427.0
+      },
+      "RETURNS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 840.0
+      },
+      "USABILITY": {
+        "precision": 1.0,
+        "recall": 0.5981524249422633,
+        "f1-score": 0.7485549132947977,
+        "support": 1299.0
+      },
+      "accuracy": 0.9236294896030246,
+      "macro avg": {
+        "precision": 0.9560372078334127,
+        "recall": 0.9317853746022102,
+        "f1-score": 0.9337356375576931,
+        "support": 13225.0
+      },
+      "weighted avg": {
+        "precision": 0.9405246977602468,
+        "recall": 0.9236294896030246,
+        "f1-score": 0.9204329044589147,
+        "support": 13225.0
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "AVAILABILITY",
+        "CUSTOMER_SUPPORT",
+        "DELIVERY",
+        "FEATURES",
+        "PACKAGING",
+        "PAYMENT",
+        "PRICING",
+        "PRODUCT_QUALITY",
+        "RETURNS",
+        "USABILITY"
+      ],
+      "matrix": [
+        [
+          508,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1142,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2256,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          937,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          488,
+          0,
+          1253,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1472,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1603,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1427,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          840,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          522,
+          0,
+          0,
+          0,
+          777
+        ]
+      ]
+    }
+  }
+}

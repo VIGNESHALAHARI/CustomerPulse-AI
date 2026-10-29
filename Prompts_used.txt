@@ -1,0 +1,250 @@
+CustomerPulse AI — AI Development Prompt Documentation
+
+1. Introduction
+
+CustomerPulse AI is a customer feedback intelligence prototype developed to explore how data processing, machine learning, and interactive dashboards can be combined to understand customer feedback.
+
+During development, AI assistance supported selected tasks such as planning the application structure, troubleshooting technical issues, reviewing machine learning workflows, improving the dashboard interface, and preparing project documentation.
+
+This document outlines the main development activities and provides representative prompts related to those tasks. It also describes the review and testing practices used to help ensure that the final implementation remains reliable and understandable.
+
+The prompts included below are reusable representations of development tasks. They should not be interpreted as exact historical conversations unless they match the prompts originally submitted.
+
+2. Use of AI Assistance
+
+AI tools were used to support selected parts of the development process. Their role was to help explore implementation approaches, investigate errors, improve code clarity, and organize technical documentation.
+
+The main areas of assistance covered in this document are:
+
+- Project planning and application architecture.
+- Python and SQLite implementation and debugging.
+- Machine learning model development and evaluation.
+- Synthetic data validation and reproducibility.
+- Streamlit dashboard implementation and interface improvements.
+- Testing, troubleshooting, and release preparation.
+- Technical documentation and project handover.
+
+AI-generated suggestions were treated as recommendations rather than automatically accepted solutions. Code and technical advice needed to be reviewed against the project's requirements and checked through appropriate testing.
+
+Note: The activities listed in this document should be retained only where they accurately reflect the work performed during the project.
+
+3. Development Prompt Records
+
+The following prompts represent the major engineering tasks associated with CustomerPulse AI. Each record describes the objective, the prompt used as a reference, the intended outcome, and the checks needed to assess the result.
+
+Prompt 1: Project Planning and Application Architecture
+
+Objective: Establish a clear structure for the customer feedback intelligence application.
+
+Prompt:
+
+«Help me design a Python-based Customer Feedback Intelligence System called CustomerPulse AI. The application should process customer feedback, classify sentiment and feedback themes, store structured information in SQLite, and present the results through a Streamlit dashboard.
+
+Propose a maintainable project structure and explain the responsibilities of the main components. Include the database layer, data-processing workflow, machine learning models, validation scripts, testing, and documentation.
+
+Keep the design practical and easy to understand. Identify the main dependencies between components and recommend an approach that supports reproducibility, testing, and future maintenance.»
+
+Expected outcome:
+
+A structured development plan with clearly defined responsibilities for data storage, processing, machine learning, validation, and presentation.
+
+Review and verification:
+
+Compare the proposed structure with the actual project files, database schema, and implemented functionality. Document any differences between the original plan and the final implementation.
+
+Prompt 2: Database Integrity and Data Validation
+
+Objective: Check the quality, consistency, and reproducibility of the project's synthetic data.
+
+Prompt:
+
+«Review the data-generation and validation workflow for CustomerPulse AI. The application uses SQLite and synthetic customer interaction data.
+
+Help identify appropriate checks for primary keys, foreign keys, required fields, valid sentiment and theme labels, rating ranges, duplicate records, and relationships between customer interactions and their associated records.
+
+Also review how a fixed random seed can support reproducibility. Recommend repeatable validation checks that identify data quality issues without unexpectedly modifying the existing dataset.
+
+Explain what each check verifies and how its result should be interpreted.»
+
+Expected outcome:
+
+A repeatable validation process that helps identify database integrity problems, inconsistent records, and potential data quality issues.
+
+Review and verification:
+
+Run the implemented validation scripts and examine their actual outputs. Record the results accurately, and do not describe a validation check as successful unless the output supports that conclusion.
+
+Prompt 3: Sentiment and Theme Classification
+
+Objective: Develop and evaluate the text classification workflow.
+
+Prompt:
+
+«Help review a text classification pipeline for CustomerPulse AI using TF-IDF feature extraction and Logistic Regression.
+
+The application requires separate classifiers for sentiment and customer feedback themes. Recommend a reproducible training and evaluation workflow with an appropriate train-test split and suitable classification metrics, including accuracy and macro F1-score.
+
+Explain how to keep target labels separate from model input features, reduce the risk of data leakage, and interpret the evaluation results.
+
+Also discuss the limitations of training and evaluating text classifiers on synthetic customer feedback, particularly when the text contains repeated or highly similar messages.»
+
+Expected outcome:
+
+A clear model-training and evaluation workflow, together with an understanding of the reported metrics and the limitations of the training data.
+
+Review and verification:
+
+Inspect the training and evaluation code, confirm that target labels are not inadvertently included in the model input features, and compare the reported metrics with the actual evaluation output. Treat performance on synthetic data as an initial experiment rather than proof of real-world accuracy.
+
+Prompt 4: Streamlit Dashboard Development
+
+Objective: Bring the project's data, visualizations, and prediction functionality together in an interactive dashboard.
+
+Prompt:
+
+«Help implement a Streamlit dashboard for CustomerPulse AI using SQLite, Pandas, Plotly, and the project's existing trained machine learning models.
+
+The dashboard should present customer interaction metrics, sentiment and theme distributions, feedback volume over time, product and channel filters, searchable feedback records, and CSV export functionality.
+
+Include a feature for predicting the sentiment and theme of newly entered feedback, along with confidence estimates where supported by the model implementation. Display the available model evaluation metrics and explain the limitations of those results.
+
+Preserve the existing database schema, model artifacts, project paths, and prediction workflow. Add appropriate error handling and clearly inform users that the dataset is synthetic.
+
+Keep the implementation maintainable and avoid introducing unnecessary dependencies.»
+
+Expected outcome:
+
+An interactive dashboard that connects the existing database, machine learning models, analytics, and feedback exploration features.
+
+Review and verification:
+
+Run the dashboard and manually check its main features, including filters, charts, search, CSV downloads, individual predictions, model metrics, and error messages. Confirm that the displayed information comes from the actual project data and evaluation report.
+
+Prompt 5: Dashboard Interface and User Experience Improvements
+
+Objective: Improve the dashboard's appearance while preserving its existing functionality.
+
+Prompt:
+
+«Act as an experienced UI/UX designer and Streamlit engineer. Improve the visual design of the CustomerPulse AI dashboard so that it feels like a polished, professional analytics application.
+
+Focus on visual hierarchy, spacing, typography, navigation, sidebar styling, metric cards, chart presentation, feedback tables, search controls, prediction forms, and the model evaluation section.
+
+Treat this as a UI improvement task rather than a functional rewrite. Preserve the existing database queries, project paths, model-loading functions, prediction logic, filters, search behavior, CSV export, evaluation metrics, and error handling.
+
+Do not introduce fabricated metrics, unnecessary external API calls, or additional dependencies without a clear requirement.
+
+Provide the updated implementation and identify the regression checks needed to confirm that the original functionality still works.»
+
+Expected outcome:
+
+A more consistent and professional dashboard interface without unintentionally changing the underlying data-processing or prediction behavior.
+
+Review and verification:
+
+Compare the revised code with the existing implementation. Run the application and repeat the relevant functional tests to check that the visual changes have not affected data retrieval, filtering, predictions, downloads, or displayed metrics.
+
+Prompt 6: Debugging and Python Environment Compatibility
+
+Objective: Investigate application startup failures and Python dependency issues.
+
+Prompt:
+
+«Help diagnose the Python import error or application traceback provided from the CustomerPulse AI development environment.
+
+Identify the failing module, inspect the active Python executable and virtual environment, and recommend a minimal troubleshooting process based on the available error information.
+
+Preserve the existing source files, database, trained models, and Windows security settings. Do not recommend bypassing security controls or downloading DLL files from untrusted sources.
+
+Provide Windows PowerShell commands to verify the Python environment, test the relevant imports, and rerun the application. Explain what each command checks and how to interpret the results.»
+
+Expected outcome:
+
+A practical troubleshooting process that identifies the likely cause of the failure and provides evidence-based steps to verify a fix.
+
+Review and verification:
+
+Confirm which Python interpreter is active, test the required imports, and rerun the relevant scripts or application after applying a justified change. Record whether the issue was resolved rather than assuming that a suggested fix worked.
+
+Prompt 7: Testing and Release Readiness
+
+Objective: Prepare the project for repository publication and deployment.
+
+Prompt:
+
+«Review CustomerPulse AI from a software engineering and release-readiness perspective.
+
+Prepare a checklist covering automated tests, database integrity, synthetic data validation, model loading, prediction behavior, dashboard functionality, dependency compatibility, secret handling, Git configuration, documentation, and deployment requirements.
+
+Distinguish between checks that have actually passed, checks that have failed, and checks that have not yet been performed. Do not assume that an earlier successful test guarantees that the current version still works.
+
+For each outstanding issue, explain its potential impact and recommend a practical next step. Prioritize issues that could prevent the application from running correctly or expose sensitive information.»
+
+Expected outcome:
+
+A release checklist that makes the project's current status clear and identifies the remaining work needed before publication or deployment.
+
+Review and verification:
+
+Run the relevant tests and validation scripts, inspect the repository configuration, and verify the application in the intended environment. Update the checklist based on actual results.
+
+4. Code Review and Human Verification
+
+AI assistance can speed up development, but generated code and recommendations still require engineering judgment. The final implementation should be understandable, testable, and consistent with the project's requirements.
+
+The following checks form part of the review process:
+
+1. Code and architecture: Confirm that the implementation follows the intended project structure and that individual components have clear responsibilities.
+2. Database integrity: Check that database operations preserve the expected schema, keys, and relationships.
+3. Machine learning workflow: Verify that the training and evaluation process separates target labels from input features and avoids unintended data leakage.
+4. Automated testing: Run the available test suite and investigate failures rather than relying on previous test results.
+5. Data validation: Review the validation outputs and investigate inconsistencies, invalid values, or reproducibility issues.
+6. Dashboard functionality: Manually test the primary interface features, including filtering, searching, visualizations, downloads, and predictions.
+7. Evaluation metrics: Confirm that reported model metrics match the actual evaluation artifacts.
+8. Environment compatibility: Check that the required dependencies can be imported and that the application starts in the intended Python environment.
+9. Security: Review the repository for exposed credentials, API keys, passwords, and other sensitive information.
+10. Documentation: Ensure that the README and supporting files describe the delivered implementation accurately.
+
+These checks help distinguish a promising implementation from a project that has been tested and is ready to share.
+
+5. Known Limitations
+
+CustomerPulse AI is a prototype, and its current results should be interpreted in that context.
+
+- Synthetic data: The dataset is generated for development and experimentation. It does not necessarily represent the complexity of real customer feedback.
+- Limited text diversity: Previous validation identified repeated feedback messages and limited text diversity. This can affect how representative the evaluation results are.
+- Evaluation scope: Performance measured on synthetic data does not establish how well the models will perform on unseen, real-world customer feedback.
+- Prediction uncertainty: Sentiment and theme predictions may be incorrect. Model confidence estimates should not be interpreted as guarantees of correctness.
+- Deployment differences: An application that runs locally may encounter different dependency, configuration, or file-path issues in a hosted environment.
+- Ongoing verification: Model metrics, test results, and deployment status should be reported using the latest verified outputs.
+
+These limitations should be considered when interpreting the dashboard and deciding how the prototype could be improved.
+
+6. Tools and Technologies
+
+The following table identifies the technologies associated with the project. The actual-use column should be completed based on the work performed and verified during development.
+
+Tool or Technology| Role in the Project| Actual Use
+Python| Application logic, data processing, and model workflows| Confirmed against the implemented source code
+SQLite| Structured storage for customer feedback and related records| Confirmed against the database and application code
+Pandas and NumPy| Data manipulation and numerical processing| Retain if used in the implementation
+Scikit-learn| TF-IDF feature extraction, Logistic Regression, and model evaluation| Confirmed against the training and evaluation code
+Streamlit| Interactive dashboard and prediction interface| Confirmed against the dashboard implementation
+Plotly| Interactive charts and data visualizations| Confirmed against the dashboard code
+Joblib| Saving and loading trained model artifacts| Retain if used in the implementation
+Pytest| Automated testing| Confirm that the test suite was run
+Git and GitHub| Version control and repository hosting| Include the actual usage status
+ChatGPT| Development assistance, troubleshooting, and documentation support| Include the tasks for which it was actually used
+Claude or other AI tools| Additional development or interface assistance| Include only if actually used
+
+Documentation note: A technology being part of the proposed design does not automatically mean it was used successfully. The final record should reflect the source code, tools, and development activities that can be verified.
+
+7. Final Disclosure
+
+AI tools supported selected development and documentation activities for CustomerPulse AI. Their contributions were used to explore implementation approaches, troubleshoot technical issues, improve presentation, and organize engineering work.
+
+The final application should be assessed on its actual implementation, test results, data quality, and demonstrated behavior—not on AI-generated suggestions alone.
+
+The project owner remains responsible for understanding the code, reviewing changes, verifying results, and ensuring that the submitted documentation accurately represents the completed project.
+
+All claims about model performance, testing, and deployment should be supported by the corresponding project outputs.s

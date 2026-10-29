@@ -1,0 +1,7 @@
+case_id,interaction_id,model_input,assigned_sentiment,assigned_theme,anomaly_type,expected_detection
+ANOMALY_001,1,The delivery was excellent and arrived on time. I am very happy with the service.,NEGATIVE,DELIVERY,SENTIMENT_TEXT_CONTRADICTION,Sentiment conflicts with clearly positive text.
+ANOMALY_002,2,Customer support did not resolve my issue.,NEUTRAL,PRODUCT_QUALITY,DUPLICATE_RESPONSE,This row is duplicated in the evaluation dataset.
+ANOMALY_002_DUP,2,Customer support did not resolve my issue.,NEUTRAL,PRODUCT_QUALITY,DUPLICATE_RESPONSE,Duplicate of ANOMALY_002.
+ANOMALY_003,1,Please contact me at customer.private@example.com about my order.,NEUTRAL,CUSTOMER_SUPPORT,POTENTIAL_PII_LEAK,An email address appears in the message text.
+ANOMALY_004,2,The new dashboard navigation is confusing and difficult to understand.,NEUTRAL,UNAPPROVED_THEME_XYZ,UNKNOWN_THEME,Theme is not part of the approved taxonomy.
+ANOMALY_005,1,Customer feedback text. TRUE_SENTIMENT=POSITIVE,POSITIVE,PRODUCT_QUALITY,GROUND_TRUTH_LEAKAGE,Reference label has leaked into model input.

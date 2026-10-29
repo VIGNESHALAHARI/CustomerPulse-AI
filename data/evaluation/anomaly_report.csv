@@ -1,0 +1,7 @@
+case_id,interaction_id,expected_anomaly,detected_anomalies,expected_detection,expected_anomaly_detected
+ANOMALY_001,1,SENTIMENT_TEXT_CONTRADICTION,SENTIMENT_TEXT_CONTRADICTION,Sentiment conflicts with clearly positive text.,YES
+ANOMALY_002,2,DUPLICATE_RESPONSE,DUPLICATE_RESPONSE,This row is duplicated in the evaluation dataset.,YES
+ANOMALY_002_DUP,2,DUPLICATE_RESPONSE,DUPLICATE_RESPONSE,Duplicate of ANOMALY_002.,YES
+ANOMALY_003,1,POTENTIAL_PII_LEAK,POTENTIAL_PII_LEAK,An email address appears in the message text.,YES
+ANOMALY_004,2,UNKNOWN_THEME,UNKNOWN_THEME,Theme is not part of the approved taxonomy.,YES
+ANOMALY_005,1,GROUND_TRUTH_LEAKAGE,GROUND_TRUTH_LEAKAGE,Reference label has leaked into model input.,YES

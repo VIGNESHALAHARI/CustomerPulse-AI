@@ -1,0 +1,22 @@
+[
+  {
+    "channel_id": 1,
+    "channel_name": "WEBSITE"
+  },
+  {
+    "channel_id": 2,
+    "channel_name": "MOBILE_APP"
+  },
+  {
+    "channel_id": 3,
+    "channel_name": "EMAIL"
+  },
+  {
+    "channel_id": 4,
+    "channel_name": "RETAIL_STORE"
+  },
+  {
+    "channel_id": 5,
+    "channel_name": "SOCIAL_MEDIA"
+  }
+]

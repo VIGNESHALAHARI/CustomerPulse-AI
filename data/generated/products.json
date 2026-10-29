@@ -1,0 +1,122 @@
+[
+  {
+    "product_id": 1,
+    "product_name": "Smartphone",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 2,
+    "product_name": "Laptop",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 3,
+    "product_name": "Headphones",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 4,
+    "product_name": "Smartwatch",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 5,
+    "product_name": "Coffee Maker",
+    "category": "Home Appliances",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 6,
+    "product_name": "Air Purifier",
+    "category": "Home Appliances",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 7,
+    "product_name": "Office Chair",
+    "category": "Furniture",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 8,
+    "product_name": "Desk Lamp",
+    "category": "Furniture",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 9,
+    "product_name": "Running Shoes",
+    "category": "Fashion",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 10,
+    "product_name": "Backpack",
+    "category": "Fashion",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 11,
+    "product_name": "Water Bottle",
+    "category": "Lifestyle",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 12,
+    "product_name": "Fitness Tracker",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 13,
+    "product_name": "Keyboard",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 14,
+    "product_name": "Wireless Mouse",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 15,
+    "product_name": "Monitor",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 16,
+    "product_name": "Tablet",
+    "category": "Electronics",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 17,
+    "product_name": "Blender",
+    "category": "Home Appliances",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 18,
+    "product_name": "Travel Mug",
+    "category": "Lifestyle",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 19,
+    "product_name": "Jacket",
+    "category": "Fashion",
+    "created_at": "2025-01-01T00:00:00"
+  },
+  {
+    "product_id": 20,
+    "product_name": "Desk",
+    "category": "Furniture",
+    "created_at": "2025-01-01T00:00:00"
+  }
+]

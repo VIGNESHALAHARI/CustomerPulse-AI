@@ -1,0 +1,50 @@
+[
+  {
+    "survey_id": 1,
+    "survey_name": "Customer Experience Survey 1",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 2,
+    "survey_name": "Customer Experience Survey 2",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 3,
+    "survey_name": "Customer Experience Survey 3",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 4,
+    "survey_name": "Customer Experience Survey 4",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 5,
+    "survey_name": "Customer Experience Survey 5",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 6,
+    "survey_name": "Customer Experience Survey 6",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 7,
+    "survey_name": "Customer Experience Survey 7",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  },
+  {
+    "survey_id": 8,
+    "survey_name": "Customer Experience Survey 8",
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31"
+  }
+]

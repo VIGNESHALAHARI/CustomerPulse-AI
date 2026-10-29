@@ -1,0 +1,35 @@
+﻿# Python virtual environments
+.venv/
+.venv311/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and log files
+*.log
+*.tmp
+
+# Streamlit local settings
+.streamlit/secrets.toml
+
+# Local test and coverage artifacts
+.coverage
+htmlcov/

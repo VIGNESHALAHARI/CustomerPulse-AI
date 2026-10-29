@@ -1,0 +1,21 @@
+product_id,product_name,category,created_at
+1,Smartphone,Electronics,2025-01-01T00:00:00
+2,Laptop,Electronics,2025-01-01T00:00:00
+3,Headphones,Electronics,2025-01-01T00:00:00
+4,Smartwatch,Electronics,2025-01-01T00:00:00
+5,Coffee Maker,Home Appliances,2025-01-01T00:00:00
+6,Air Purifier,Home Appliances,2025-01-01T00:00:00
+7,Office Chair,Furniture,2025-01-01T00:00:00
+8,Desk Lamp,Furniture,2025-01-01T00:00:00
+9,Running Shoes,Fashion,2025-01-01T00:00:00
+10,Backpack,Fashion,2025-01-01T00:00:00
+11,Water Bottle,Lifestyle,2025-01-01T00:00:00
+12,Fitness Tracker,Electronics,2025-01-01T00:00:00
+13,Keyboard,Electronics,2025-01-01T00:00:00
+14,Wireless Mouse,Electronics,2025-01-01T00:00:00
+15,Monitor,Electronics,2025-01-01T00:00:00
+16,Tablet,Electronics,2025-01-01T00:00:00
+17,Blender,Home Appliances,2025-01-01T00:00:00
+18,Travel Mug,Lifestyle,2025-01-01T00:00:00
+19,Jacket,Fashion,2025-01-01T00:00:00
+20,Desk,Furniture,2025-01-01T00:00:00
