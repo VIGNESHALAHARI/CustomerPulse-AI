@@ -2,33 +2,54 @@ CustomerPulse AI — Customer Feedback Intelligence System
 
 An AI-powered customer feedback analytics prototype that analyzes synthetic customer interactions to identify sentiment, classify feedback themes, and explore customer feedback through an interactive dashboard.
 
-Overview
+<p align="center">
+  <a href="https://customerpulse-ai-dvlczpc6kldtnappabq4dfp.streamlit.app/">
+    <strong>🚀 Live Demo</strong>
+  </a>
+  &nbsp; | &nbsp;
+  <a href="https://github.com/VIGNESHALAHARI/CustomerPulse-AI">
+    <strong>💻 GitHub Repository</strong>
+  </a>
+</p>---
 
-Customer feedback can contain valuable information about product quality, delivery experiences, pricing, and customer support. However, manually reviewing large volumes of feedback can be time-consuming.
+📌 Overview
 
-CustomerPulse AI demonstrates how machine learning can help organize and analyze feedback using text classification, data visualization, and an interactive analytics dashboard.
+Customer feedback contains valuable information about product quality, delivery experiences, pricing, and customer support. However, manually reviewing large volumes of feedback can be time-consuming.
 
-Important: This project uses synthetic data. Its results do not establish how well the models will perform on genuine customer feedback.
+CustomerPulse AI demonstrates how machine learning can help organize and analyze customer feedback through text classification, data visualization, and an interactive analytics dashboard.
 
-Features
+The application combines a Streamlit interface, SQLite data storage, and trained machine learning models to provide sentiment predictions, theme classification, and feedback exploration.
 
-- Customer feedback analytics: Explore customer interactions from surveys, product reviews, and support messages.
-- Sentiment classification: Predict sentiment using a trained machine learning model.
-- Theme classification: Assign feedback to a predicted theme.
-- Interactive dashboard: Explore metrics and visualizations through Streamlit.
+«Important: This project uses synthetic customer data. Its results do not establish how well the models will perform on genuine customer feedback.»
+
+✨ Features
+
+- Customer Feedback Analytics: Explore customer interactions from surveys, product reviews, and support messages.
+- Sentiment Classification: Predict the sentiment of customer feedback using a trained machine learning model.
+- Theme Classification: Assign feedback to a predicted theme.
+- Interactive Dashboard: Explore metrics and visualizations through Streamlit.
 - Filtering: Filter interactions by product and channel.
-- Feedback search: Search feedback using a case-insensitive text search.
-- Visual analytics: Explore predicted sentiment, predicted themes, and feedback volume over time.
-- Individual predictions: Enter new feedback and view predicted sentiment, theme, and available confidence estimates.
-- Model evaluation: Display evaluation metrics from a saved JSON report.
-- CSV export: Download filtered feedback records.
-- Data validation: Validate dataset integrity and reproducibility using the project's validation scripts.
+- Feedback Search: Search feedback using a case-insensitive text search.
+- Visual Analytics: Explore predicted sentiment, predicted themes, and feedback volume over time.
+- Individual Predictions: Enter new feedback and view predicted sentiment, theme, and available confidence estimates.
+- Model Evaluation: Display evaluation metrics from a saved JSON report.
+- CSV Export: Download filtered feedback records.
+- Data Validation: Run validation scripts to assess dataset integrity, anomalies, and reproducibility.
 
-Technology Stack
+🖥️ Live Application
+
+Try CustomerPulse AI:
+https://customerpulse-ai-dvlczpc6kldtnappabq4dfp.streamlit.app/
+
+The application is deployed using Streamlit Community Cloud.
+
+The live application should be evaluated as a demonstration prototype. Its predictions and analytics are based on synthetic data and should not be interpreted as verified business outcomes.
+
+🛠️ Technology Stack
 
 Technology| Purpose
 Python| Main programming language
-Streamlit| Interactive dashboard
+Streamlit| Interactive dashboard and application interface
 SQLite| Relational data storage
 Pandas| Data loading and processing
 NumPy| Numerical computing
@@ -36,25 +57,122 @@ Scikit-learn| Machine learning and text classification
 TF-IDF| Text feature extraction
 Logistic Regression| Sentiment and theme classification
 Joblib| Saving and loading trained models
-Plotly| Interactive charts
+Plotly| Interactive data visualization
 Pytest| Automated testing
 
-Project Structure
+🧠 Machine Learning Approach
 
-The following is the expected high-level structure. Confirm the actual filenames in your repository before finalizing this section.
+CustomerPulse AI uses text classification to analyze customer feedback.
 
-coding challenge/
+1. Text Feature Extraction
+
+TF-IDF (Term Frequency–Inverse Document Frequency) converts feedback text into numerical features that machine learning models can process.
+
+2. Sentiment Classification
+
+A trained Logistic Regression classifier predicts the sentiment associated with a feedback message.
+
+3. Theme Classification
+
+A separate trained Logistic Regression classifier predicts the theme associated with a feedback message.
+
+4. Model Persistence
+
+The trained models are saved as Joblib artifacts and loaded by the application for prediction.
+
+The repository includes the following model files:
+
+- "models/sentiment_model.joblib"
+- "models/theme_model.joblib"
+
+Model predictions depend on the training data and its characteristics. The synthetic dataset's repetition and limited text diversity may affect the reported evaluation results.
+
+📊 Dataset
+
+The project uses synthetically generated customer interaction data.
+
+The configured generation seed was previously reported as "20261022".
+
+The following counts were reported during earlier development and should be confirmed by running the current validation scripts.
+
+Dataset Component| Previously Reported Records
+Customers| 5,000
+Products| 20
+Channels| 5
+Surveys| 8
+Reviews| 25,000
+Survey Responses| 25,000
+Support Messages| 20,000
+Interactions| 70,000
+Themes| 10
+Sentiment Labels| 3
+Ground-Truth Records| 70,000
+
+The repository contains generated datasets, SQLite databases, and ground-truth data used for analysis, evaluation, and validation.
+
+Data Quality and Limitations
+
+Previous validation reported:
+
+- Zero foreign-key violations.
+- Zero invalid interaction links.
+- No invalid ratings, labels, or themes in the validated dataset.
+- Approximately 1,130 unique messages across 70,000 records in an earlier text-quality analysis.
+
+The relatively small number of unique messages indicates substantial repetition and limited text diversity.
+
+Synthetic records and repeated messages can make model evaluation appear stronger than performance on diverse, genuine customer feedback. These limitations must be considered when interpreting the results.
+
+📈 Previously Reported Model Evaluation
+
+The following results were reported during earlier development. They must be verified against the current "reports/model_evaluation.json" file before being treated as final.
+
+Model| Accuracy| Macro F1-Score
+Sentiment Classification| 74.92%| 71.93%
+Theme Classification| 92.36%| 93.37%
+
+These metrics were obtained using synthetic data and do not establish model performance on real-world customer feedback.
+
+The reported results should be interpreted alongside the dataset's limited text diversity, repeated messages, and evaluation methodology.
+
+📁 Project Structure
+
+The main files committed to the repository are organized as follows:
+
+CustomerPulse-AI/
+├── .streamlit/
+│   └── config.toml
 ├── app/
 │   ├── dashboard/
 │   │   └── dashboard.py
+│   ├── data_generation/
+│   │   ├── export_data.py
+│   │   ├── export_sql.py
+│   │   └── generate_data.py
+│   ├── database/
+│   │   ├── init_db.py
+│   │   └── schema.sql
+│   ├── ml/
+│   │   └── train_models.py
 │   └── validation/
-│       ├── validate_data.py
+│       ├── analyze_data_quality.py
+│       ├── analyze_text_quality.py
+│       ├── create_anomaly_cases.py
 │       ├── detect_anomalies.py
-│       └── test_reproducibility.py
+│       ├── test_reproducibility.py
+│       ├── validate_data.py
+│       └── validate_data_backup.py
+├── data/
+│   ├── evaluation/
+│   ├── generated/
+│   └── ground_truth/
 ├── data_fresh/
 │   ├── customerpulse.db
 │   └── ground_truth/
-│       └── ground_truth.csv
+├── data_quality_test/
+│   └── customerpulse.db
+├── docs/
+│   └── data_dictionary.md
 ├── models/
 │   ├── sentiment_model.joblib
 │   └── theme_model.joblib
@@ -62,194 +180,155 @@ coding challenge/
 │   └── model_evaluation.json
 ├── tests/
 │   └── test_customerpulse.py
+├── .gitignore
+├── Prompts_used.txt
 ├── README.md
-├── PROMPTS.md
-├── requirements.txt
-└── .gitignore
+└── requirements.txt
 
-Other project files may exist, including data-generation and model-training scripts.
+The repository also contains additional generated CSV, JSON, and SQL files under "data/generated/".
 
-Dataset
-
-The project uses synthetic customer interactions generated with the configured seed:
-
-"20261022"
-
-The previously validated dataset contained the following records:
-
-Dataset component| Record count
-Customers| 5,000
-Products| 20
-Channels| 5
-Surveys| 8
-Reviews| 25,000
-Survey responses| 25,000
-Support messages| 20,000
-Interactions| 70,000
-Themes| 10
-Sentiment labels| 3
-Ground-truth records| 70,000
-
-These are previously reported counts. Rerun the project's validation scripts to confirm the current files still match them.
-
-Data quality and limitations
-
-The dataset was designed to support testing and demonstration of the feedback analytics pipeline.
-
-Previous validation reported zero foreign-key violations and zero invalid interaction links, ratings, labels, or themes.
-
-An earlier text-quality check also identified substantial repetition: approximately 1,130 unique messages across 70,000 records. Consequently, the dataset has limited text diversity.
-
-Synthetic records and repeated messages can make model evaluation appear stronger than performance on diverse, genuine customer feedback. This limitation should be considered when interpreting results.
-
-Machine Learning
-
-The project uses TF-IDF text features and Logistic Regression classifiers for two tasks:
-
-1. Sentiment classification.
-2. Feedback theme classification.
-
-The trained models are stored as Joblib artifacts.
-
-Previously reported evaluation results
-
-Model| Accuracy| Macro F1-score
-Sentiment classification| 74.92%| 71.93%
-Theme classification| 92.36%| 93.37%
-
-These figures were reported during earlier development and must be checked against the current evaluation report before being treated as final results.
-
-The models were evaluated on synthetic data. These metrics must not be interpreted as verified performance on real-world customer feedback.
-
-Installation and Setup
+🚀 Installation and Setup
 
 Prerequisites
 
-- Python version compatible with the project's dependencies.
+- Python compatible with the pinned dependencies.
 - Git.
-- Visual Studio Code or another Python development environment.
+- A terminal such as Windows PowerShell or macOS/Linux Terminal.
+- A Python development environment such as Visual Studio Code.
 
-1. Clone the repository
+1. Clone the Repository
 
-After pushing the project to GitHub, clone it using:
+git clone https://github.com/VIGNESHALAHARI/CustomerPulse-AI.git
+cd CustomerPulse-AI
 
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd "<YOUR_PROJECT_DIRECTORY>"
+2. Create a Virtual Environment
 
-Replace the placeholders with your actual repository URL and directory name.
-
-2. Create a virtual environment
-
-Windows PowerShell:
+Windows PowerShell
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-If you already have a compatible, working virtual environment, you can activate that instead.
+If PowerShell prevents activation because of its execution policy, use an appropriate process-scoped policy or follow your organization's security guidance.
 
-3. Install dependencies
+macOS/Linux
 
-If "requirements.txt" has been verified:
+python -m venv .venv
+source .venv/bin/activate
+
+3. Install Dependencies
+
+Install the packages specified in "requirements.txt":
 
 python -m pip install -r requirements.txt
 
-Use package versions compatible with the project's Python version and saved model artifacts.
+Use a Python version compatible with the pinned dependencies and the project's saved model artifacts.
 
-4. Verify required files
+4. Verify Required Files
 
-The dashboard expects these files at the configured locations:
+The dashboard is configured to use the following files:
 
 data_fresh/customerpulse.db
 models/sentiment_model.joblib
 models/theme_model.joblib
 reports/model_evaluation.json
 
-The ground-truth CSV and validation scripts are also needed for the corresponding validation workflows.
+The ground-truth CSV and validation scripts are needed for the corresponding validation workflows.
 
-Make sure the required artifacts are included in the repository or provided through a documented setup process.
+Ensure the required files are present after cloning the repository.
 
-Run the Dashboard
+▶️ Run the Dashboard Locally
 
-From the project root, activate the working virtual environment and run:
+From the repository root, activate the virtual environment and run:
 
-python -m streamlit run app\dashboard\dashboard.py
+python -m streamlit run app/dashboard/dashboard.py
 
-Open the local address displayed by Streamlit in your browser.
+Streamlit will display a local URL in the terminal. Open that address in your browser to access the application.
 
-Testing and Validation
+🧪 Testing and Validation
 
-Run these commands from the project root in the appropriate Python environment.
+Run the commands from the repository root using a compatible Python environment.
 
-Automated tests
+Automated Tests
 
 python -m pytest -v
 
-Data validation
+Data Validation
 
 python -m app.validation.validate_data
 
-Anomaly detection
+Anomaly Detection
 
 python -m app.validation.detect_anomalies
 
-Reproducibility
+Reproducibility Validation
 
 python -m app.validation.test_reproducibility
 
-These commands assume the corresponding modules exist at the documented paths. Confirm their names against the actual repository before publishing this README.
+These commands correspond to the validation modules included in the repository. If a command fails, investigate the error and its dependencies rather than assuming validation has passed.
 
-Investigate any failures rather than assuming the project is ready for release.
+☁️ Deployment
 
-Deployment
+The application is deployed using Streamlit Community Cloud.
 
-The dashboard can be deployed to a compatible Streamlit hosting platform after the application and dependencies have been verified.
+Live application:
+https://customerpulse-ai-dvlczpc6kldtnappabq4dfp.streamlit.app/
 
-Before deployment:
+Deployment configuration and dependencies should be kept consistent with the application's local setup.
 
-1. Confirm that the required database and trained models are available to the hosted application.
-2. Confirm that all file paths work in the hosting environment.
-3. Verify the supported Python version and package dependencies.
-4. Ensure the application does not depend on files available only on your local computer.
-5. Check repository and hosting-platform file-size limits.
-6. Remove secrets and sensitive information.
-7. Test the deployed application using its public URL.
+For reproducible deployments:
 
-Deployment is complete only after the hosted application has been tested successfully.
+1. Ensure all required application files are committed to GitHub.
+2. Keep the dependency list updated.
+3. Confirm that database and model paths work in the hosted environment.
+4. Avoid dependencies on files available only on a developer's computer.
+5. Keep secrets and sensitive information out of the repository.
+6. Test the deployed application after code or dependency changes.
 
-Responsible Use and Limitations
+🔒 Responsible Use and Limitations
 
 - The dataset is synthetic, not genuine customer feedback.
 - The dataset contains repeated messages and limited text diversity.
 - Model performance on synthetic data may not generalize to real-world data.
-- Predicted sentiment and themes can be incorrect.
-- Confidence estimates are model probability estimates, not guarantees of correctness.
-- Predictions should be reviewed before being used for business decisions.
-- The application is a prototype, not a validated production decision-making system.
+- Sentiment and theme predictions can be incorrect.
+- Confidence estimates, when available, are model probability estimates rather than guarantees of correctness.
+- Predictions should be reviewed before being used to inform business decisions.
+- The application is a demonstration prototype, not a validated production decision-making system.
 
-AI-Assisted Development
+🤖 AI-Assisted Development
 
-AI tools were used to assist with development-related activities. The accompanying "PROMPTS.md" file documents relevant development prompts and their intended purposes.
+AI tools were used to assist with development-related activities.
 
-AI-generated code and suggestions must be reviewed, tested, and understood before use. See "PROMPTS.md" for the development prompt record.
+The repository includes "Prompts_used.txt", which documents reusable development prompts and their intended purposes. The file should not be interpreted as an exact transcript of historical conversations unless it has been verified as such.
 
-Future Improvements
+AI-generated code and suggestions should be reviewed, tested, and understood before use.
+
+🔮 Future Improvements
 
 Potential improvements include:
 
-- Increasing synthetic text diversity.
+- Increasing the diversity of synthetic feedback text.
 - Evaluating the models on appropriately obtained real-world data.
-- Improving test coverage.
-- Adding model monitoring and error analysis.
+- Expanding automated test coverage.
+- Adding more detailed model error analysis.
 - Improving deployment automation.
-- Adding more detailed data quality reporting.
-- Improving accessibility and dashboard usability.
+- Enhancing data quality reporting.
+- Improving dashboard accessibility and usability.
+- Monitoring model behavior as new data becomes available.
 
-License
+📄 License
 
-Choose an appropriate open-source license before publishing this repository. Do not imply that the project is licensed for reuse until a license has been selected and added.
+No open-source license has been specified in this repository.
 
-Author
+A license should be selected and added before granting explicit reuse permissions. Until then, do not assume that the project is licensed for unrestricted reuse.
+
+👨‍💻 Author
 
 Alahari Govinda Sai Vigneswar
 
+GitHub: https://github.com/VIGNESHALAHARI
+
+---
+
 CustomerPulse AI — Customer Feedback Intelligence System
+
+An educational prototype demonstrating customer feedback analytics, text classification, and interactive data visualization using Python and machine learning.
